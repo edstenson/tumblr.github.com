@@ -49,6 +49,13 @@ span.name {
   border-bottom: 1px solid black;
   margin-bottom: 10px;
 }
+.project-release:before {
+  content: "Release Date: "
+}
+.project-release {
+  font-size: small;
+  color: gray;
+}
 .project-language:before {
   content: "Language: "
 }

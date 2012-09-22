@@ -19,6 +19,12 @@ $(document).ready(function() {
     })
   }
 
+  function afterAjaxCalls() {
+    resizeThumbnails("#projects", 0)
+    resizeThumbnails("#cs-projects", 0)
+    resizeThumbnails("#presentations", 10)
+  }
+
   function addRecentlyUpdatedRepo(repo) {
     var item = $("<li>");
 
@@ -72,7 +78,6 @@ $(document).ready(function() {
 
     item.append(project)
     item.appendTo("#projects")
-    resizeThumbnails("#projects", 0)
   }
 
   $.getJSON("https://api.github.com/orgs/tumblr/members?callback=?", function(result) {
@@ -114,10 +119,63 @@ $(document).ready(function() {
     $.each(repos.slice(0, 4), function(i, repo) {
       addRecentlyUpdatedRepo(repo)
     })
+    afterAjaxCalls()
     $('[data-spy="scroll"]').each(function() {
       $(this).scrollspy('refresh')
     })
   })
 
-  resizeThumbnails("#presentations", 10)
+  var cs_projects = [
+    {
+      name: "ann",
+      description: "Pager Duty Calltree with Twilio",
+      link: null,
+      release_date: "Oct 15, 2012"
+    },
+    {
+      name: "collins",
+      description: "Infrastructure management for engineers",
+      link: "http://tumblr.github.com/collins/",
+      release_date: "Oct 27, 2012"
+    },
+    {
+      name: "tribute",
+      description: "Redis tribute - for redistributing your redis data",
+      link: null,
+      release_date: "Nov 7, 2012"
+    },
+    {
+      name: "visioner",
+      description: "Infrastructure automation framework in Ruby",
+      link: "http://tumblr.github.com/collins/tools.html#visioner",
+      release_date: "Nov 15, 2012"
+    },
+    {
+      name: "fibr",
+      description: "OpenTSDB Visualization Tool",
+      link: "http://tumblr.github.com/collins/tools.html#fibr",
+      release_date: "Nov 27, 2012"
+    }
+  ]
+
+  $.each(cs_projects, function(i, proj) {
+    var item = $("<li>").addClass("span4")
+    var project = $("<div>").addClass("thumbnail project")
+
+    var project_header = $("<div>").addClass("project-header")
+    var h3 = $("<h3>")
+    if (proj.link === null) {
+      project_header.append(h3.text(proj.name))
+    } else {
+      var project_link = $("<a>").attr("href", proj.link).text(proj.name)
+      project_header.append(h3.append(project_link))
+    }
+    project.append(project_header)
+
+    project.append($("<p>").text(proj.description))
+    project.append($("<p>").addClass("project-release").text(proj.release_date))
+
+    item.append(project)
+    item.appendTo("#cs-projects")
+  })
 })
