@@ -1,0 +1,8 @@
+permalink: none
+exclude:
+  - '.gitignore'
+  - cleanup.sh
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - template.html

@@ -1,0 +1,194 @@
+---
+permalink: index.html
+layout: default
+---
+
+<section id="code">
+  <div class="row">
+    <div class="span12">
+      <h1>Code</h1>
+      <p class="lead">Open source projects from Tumblr</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+      <ul class="thumbnails">
+        <li class="span3">
+          <div class="thumbnail">
+            <ul class="breadcrumb">
+              <li>
+                <h3><a href="http://www.tumblr.com/about" target="_blank">About Tumblr</a></h3>
+              </li>
+            </ul>
+            <ul class="unstyled"><li>
+            {% include code_about.html %}
+            </li></ul>
+          </div>
+        </li>
+        <li class="span6">
+          <div class="thumbnail">
+            <ul class="breadcrumb">
+              <li>
+                <h3><a href="https://github.com/tumblr/repositories">Recent Updates</a></h3>
+              </li>
+            </ul>
+            <ul class="unstyled" id="recently-updated">
+            </ul>
+          </div>
+        </li>
+        <li class="span3">
+          <div class="thumbnail">
+            <ul class="breadcrumb"><li><h3>Stats</h3></li></ul>
+            <ul class="unstyled">
+              <li><a href="https://github.com/tumblr/repositories"><span id="num-repos"></span></a> public repos</li>
+              <li><a href="https://github.com/tumblr"><span id="num-members"></span></a> members</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+      <ul id="projects" class="thumbnails">
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="presentations">
+  <div class="row">
+    <div class="span12">
+      <h1>Presentations</h1>
+      <p class="lead">Selected presentations from conferences or events</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span12">
+      <ul class="thumbnails">
+
+        <li class="span4">
+          <div class="thumbnail presentation">
+            <div class="presentation-header">
+              <h3>Scalable Systems Operation</h3>
+            </div>
+            <div class="presentation-body">
+              <p>
+                System Administration is both an art and a science. This talk from Velocity 2012
+                covers a set of principals and techniques for getting work done efficiently and
+                effectively. The talk also covers a recent Tumblr automation project as an example
+                of these principles and techniques applied.
+              </p>
+              <p><small>Joshua Hoffman. June, 27 2012</small></p>
+            </div>
+            <div class="presentation-footer">
+              <a href="assets/2012-06-scalable_system_operations.pdf" class="btn">View</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="span4">
+          <div class="thumbnail presentation">
+            <div class="presentation-header">
+              <h3>Futures and Promises: <small>Lessons in Concurrency Learned at Tumblr</small></h3>
+            </div>
+            <div class="presentation-body">
+              <p>
+              In this talk I'll discuss the architectural underpinnings of Tumblr's distributed
+              systems infrastructure. I'll focus primarily on Motherboy, an eventually consistent
+              inbox style storage system. Additionally, I'll discuss some of our findings in
+              evaluating various concurrency models as well as how our choice of Scala as our
+              back-end language of choice played into those decisions.
+              </p>
+              <p>
+              <small>Blake Matheny. June, 19 2012</small>
+              </p>
+            </div>
+            <div class="presentation-footer">
+              <a href="assets/2012-06-futures_and_promises.pdf" class="btn">View</a>
+          </div>
+        </li>
+
+        <li class="span4">
+          <div class="thumbnail presentation">
+            <div class="presentation-header">
+              <h3>Growing Your Inbox: <small>HBase at Tumblr</small></h3>
+            </div>
+            <div class="presentation-body">
+              <p>
+                In this talk I’ll go into detail about Tumblr’s experience developing Motherboy,
+                an eventually consistent inbox style storage system built around HBase. The SLA,
+                write concurrency, data volume, and failure modes for this application created a
+                number of challenges in developing a solution.
+              </p>
+              <p><small>Bennett Andrews. May, 22 2012</small></p>
+            </div>
+            <div class="presentation-footer">
+              <a href="assets/2012-05-growing_your_inbox.pdf" class="btn">View</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="span4">
+          <div class="thumbnail presentation">
+            <div class="presentation-header">
+              <h3>Adding Scala to your company's software stack</h3>
+            </div>
+            <div class="presentation-body">
+              <p>Panel for the NY scala meetup</p>
+              <p><small>Blake Matheny. Feb, 13 2012</small></p>
+            </div>
+            <div class="presentation-footer">
+              <a href="http://vimeo.com/36813452" class="btn">View</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="span4">
+          <div class="thumbnail presentation">
+            <div class="presentation-header">
+              <h3>Massively Sharded MySQL at Tumblr</h3>
+            </div>
+            <div class="presentation-body">
+              <p>
+              Sharding a huge, very active MySQL dataset can mean running into
+              more gotchas than obvious solutions. At this session, we'll outline how,
+              when, and why we sharded Tumblr's primary data set. We'll also cover the
+              application logic and automation tools that we built to initially shard,
+              split, and move billions of rows of MySQL data for millions of blogs, and
+              the mistakes we made along the way.
+              </p>
+              <p>
+              <small>Evan Elias. Nov, 8 2011</small>
+              </p>
+            </div>
+            <div class="presentation-footer">
+              <a href="assets/2011-11-massively_sharded_mysql.pdf" class="btn">View</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="span4">
+          <div class="thumbnail presentation">
+            <div class="presentation-header">
+              <h3>Building Network Services with Finagle and Ostrich</h3>
+            </div>
+            <div class="presentation-body">
+              <p>
+                NY scala meetup presentation.
+              </p>
+              <p>
+                <small>Blake Matheny. Sep, 27 2011</small>
+              </p>
+            </div>
+            <div class="presentation-footer">
+              <a href="http://vimeo.com/29763331" class="btn">View</a>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</section>
