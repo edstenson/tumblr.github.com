@@ -135,55 +135,49 @@ $(document).ready(function() {
       name: "ann",
       description: "Pager Duty Calltree with Twilio",
       link: null,
-      release_date: "Nov 15, 2012"
+      release_date: "May 15, 2013"
     },
     {
       name: "phil",
       description: "Generate kickstart and iPXE configs from Collins",
       link: "http://tumblr.github.com/collins/tools.html#phil",
-      release_date: "Nov 31, 2012"
+      release_date: "May 31, 2013"
     },
     {
       name: "Invisible Touch",
       description: "Physical intake, burn-in and rescue image",
       link: "http://tumblr.github.com/collins/tools.html#it",
-      release_date: "Dec 7, 2012"
+      release_date: "June 7, 2013"
     },
     {
       name: "tribute",
       description: "Redis tribute - for redistributing your redis data",
       link: null,
-      release_date: "Dec 14, 2012"
+      release_date: "June 14, 2013"
     },
     {
       name: "visioner",
       description: "Infrastructure automation framework in Ruby",
       link: "http://tumblr.github.com/collins/tools.html#visioner",
-      release_date: "Dec 21, 2012"
+      release_date: "June 21, 2013"
     },
     {
       name: "indefatigable",
       description: "Collectd plugin for submitting stats to OpenTSDB",
       link: null,
-      release_date: "Dec 28, 2012"
+      release_date: "June 28, 2013"
     },
     {
       name: "fibr",
       description: "OpenTSDB Visualization Tool",
       link: "http://tumblr.github.com/collins/tools.html#fibr",
-      release_date: "Dec 28, 2012"
-    },
-    {
-      name: "quall",
-      description: "Load test tools based on EC2 and Iago",
-      link: null,
-      release_date: "Jan 5, 2013"
+      release_date: "June 28, 2013"
     },
     {
       name: "configr",
       description: "Collins based config generation for nagios, varnish, haproxy, DNS, etc",
       link: null,
-      release_date: "Jan 12, 2013"
+      release_date: "July 12, 2013"
     }
   ]
 
