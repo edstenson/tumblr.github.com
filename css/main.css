@@ -15,6 +15,27 @@ span.bullet {
   padding-right: 5px;
 }
 
+.gsoc {
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.gsoc-header {
+  border-bottom: 1px solid black;
+}
+.gsoc-body {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.gsoc-footer {
+  position: absolute;
+  margin-top: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  bottom: 0px;
+  left: 5px;
+}
+
 .presentation {
   position: relative;
   padding-left: 10px;
